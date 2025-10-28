@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (for social media icons) -->
+  <script src="https://kit.fontawesome.com/a2c1e2e8a7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -31,17 +34,22 @@
       <li><a href="#shows">Shows</a></li>
       <li><a href="#ministry">Ministry</a></li>
       <li><a href="#trips">Trips</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#donate">Donate</a></li>
       <li><a href="#email">Email</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
       <li><a href="resume.html">Resume</a></li>
     </ul>
-    <button id="mode-toggle">☾</button>
   </nav>
 
+  <!-- Dark/Light Mode Button -->
+  <button id="mode-toggle">☾</button>
+
   <!-- Header -->
-  <header id="home">
+  <header id="home" class="overlay purple-bg">
     <h1>James Richards</h1>
     <h2>Psalms 3:3</h2>
+    <p class="verse-text"><em>“But you, Lord, are a shield around me, my glory, the One who lifts my head high.”</em> — NIV</p>
   </header>
 
   <!-- About Section -->
@@ -53,11 +61,14 @@
     </div>
   </section>
 
+  <!-- Background Image Transition -->
+  <div class="section-transition"></div>
+
   <!-- Favorite Bible Verses -->
-  <section id="verses" class="fade-in">
+  <section id="verses" class="fade-in purple-bg">
     <h3>Favorite Bible Verses</h3>
     <ul>
-      <li><strong>Psalms 3:3</strong> - But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head.</li>
+      <li><strong>Psalms 3:3</strong> - But you, Lord, are a shield around me, my glory, the One who lifts my head high.</li>
       <li><strong>Jeremiah 29:11</strong> - For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.</li>
       <li><strong>Philippians 4:13</strong> - I can do all things through Christ who strengthens me.</li>
       <li><strong>1 John 2:29</strong> - If you know that he is righteous, you know that everyone who does what is right has been born of him.</li>
@@ -67,16 +78,18 @@
   <!-- Social Media -->
   <section id="socials" class="fade-in">
     <h3>Connect With Me</h3>
-    <div class="social-links">
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://youtube.com" target="_blank">YouTube</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
+  <div class="section-transition"></div>
+
   <!-- Music -->
-  <section id="music" class="fade-in">
+  <section id="music" class="fade-in purple-bg">
     <h3>Currently Listening To</h3>
     <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
     sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
@@ -89,8 +102,10 @@
     <p>Check out what I'm watching on <a href="https://letterboxd.com/JamesRichards38/" target="_blank">Letterboxd</a>.</p>
   </section>
 
+  <div class="section-transition"></div>
+
   <!-- Ministry -->
-  <section id="ministry" class="fade-in">
+  <section id="ministry" class="fade-in purple-bg">
     <h3>Ministry Opportunities</h3>
     <p>I am passionate about spreading the Gospel through music and outreach. Follow my ministry journey and upcoming projects here.</p>
   </section>
@@ -101,6 +116,20 @@
     <p><strong>Las Vegas — March 2026:</strong> Working with human-trafficked individuals through outreach and ministry support.</p>
   </section>
 
+  <div class="section-transition"></div>
+
+  <!-- Photo Gallery -->
+  <section id="gallery" class="fade-in purple-bg">
+    <h3>Photo Gallery</h3>
+    <div class="gallery-grid">
+      <img src="images/photo1.jpg" alt="Gallery photo placeholder">
+      <img src="images/photo2.jpg" alt="Gallery photo placeholder">
+      <img src="images/photo3.jpg" alt="Gallery photo placeholder">
+      <img src="images/photo4.jpg" alt="Gallery photo placeholder">
+    </div>
+    <p style="margin-top:15px;">(Add your own photos by replacing these in the “images” folder.)</p>
+  </section>
+
   <!-- Donations -->
   <section id="donate" class="fade-in">
     <h3>Support My Ministry</h3>
@@ -108,7 +137,7 @@
   </section>
 
   <!-- Email -->
-  <section id="email" class="fade-in">
+  <section id="email" class="fade-in purple-bg">
     <h3>Contact Me</h3>
     <p><a href="mailto:jamestrichards2005@gmail.com">Click here to email me</a></p>
   </section>
