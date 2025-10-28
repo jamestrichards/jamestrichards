@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 const fadeEls = document.querySelectorAll(".fade-in");
 
 const appearOptions = { threshold: 0.2 };
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("visible");
@@ -21,7 +21,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 
 fadeEls.forEach(el => appearOnScroll.observe(el));
 
-// === Smooth Scroll for Menu Links ===
+// === Smooth Scroll for Internal Links ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
@@ -32,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// === Dark/Light Mode Toggle ===
+// === Dark/Light Mode Toggle (Bottom Left Corner) ===
 const toggleBtn = document.getElementById("mode-toggle");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
