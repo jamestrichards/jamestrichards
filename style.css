@@ -1,33 +1,45 @@
+/* === Global Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+:root{
+  --bg-dark: #0d0d0d;
+  --text-light: #f4f4f4;
+  --accent: #a970ff;
+  --accent-dark: #8a4bff;
+  --muted: #aaa;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Serif JP', serif;
-  background-color: #0d0d0d;
-  color: #f4f4f4;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   line-height: 1.7;
   scroll-behavior: smooth;
   transition: background 0.3s, color 0.3s;
 }
 
-/* Light Mode Adjusted */
+/* === Light Mode === */
 .light-mode {
   background-color: #ffffff;
   color: #0d0d0d;
 }
 
+/* make the header white in light mode as requested */
 .light-mode header {
   background-color: #ffffff;
   color: #0d0d0d;
 }
 
 .light-mode header h2 {
-  color: #6633cc;
+  color: #6633cc; /* darker purple-ish on light bg */
 }
 
 .light-mode .verse-text {
   color: #333;
 }
 
-/* Loader */
+/* === Loader === */
 #loader {
   position: fixed;
   top: 0; left: 0;
@@ -40,17 +52,17 @@ body {
 }
 
 .glow {
-  color: #a970ff;
+  color: var(--accent);
   font-size: 2.5rem;
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px #a970ff, 0 0 20px #a970ff; }
-  to { text-shadow: 0 0 40px #a970ff, 0 0 70px #a970ff; }
+  from { text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent); }
+  to { text-shadow: 0 0 40px var(--accent), 0 0 70px var(--accent); }
 }
 
-/* Navbar */
+/* === Navbar === */
 .navbar {
   background: rgba(0, 0, 0, 0.9);
   position: fixed;
@@ -60,6 +72,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 .navbar ul {
@@ -69,21 +82,49 @@ body {
   gap: 15px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar li a {
-  color: #f4f4f4;
+  color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
+  padding: 6px 8px;
 }
 
 .navbar li a:hover,
 .navbar li a.active {
-  color: #a970ff;
+  color: var(--accent);
 }
 
-/* Header */
+/* In light mode, make navbar links dark */
+.light-mode .navbar {
+  background: rgba(255,255,255,0.95);
+}
+.light-mode .navbar li a { color: #0d0d0d; }
+
+/* === Dark/Light Toggle (Bottom-Left Corner) === */
+#mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(169, 112, 255, 0.5);
+  transition: 0.3s;
+  z-index: 200;
+}
+
+#mode-toggle:hover { background-color: var(--accent-dark); }
+
+/* === Header === */
 header {
   height: 100vh;
   display: flex;
@@ -92,27 +133,250 @@ header {
   align-items: center;
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Gallery (6 Image Layout) */
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header h2 {
+  color: var(--accent);
+  margin: 8px 0 0;
+}
+
+.verse-text {
+  max-width: 760px;
+  margin: 15px auto 0;
+  font-style: italic;
+  color: #d8c7ff;
+}
+
+/* === Section Styles === */
+section {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  transition: background 0.5s ease;
+  box-sizing: border-box;
+}
+
+section h3, section h2 {
+  color: var(--accent);
+  margin-bottom: 25px;
+}
+
+/* === About === */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#about img {
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(169, 112, 255, 0.5);
+  object-fit: cover;
+}
+
+/* === Social Media Icons === */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: var(--accent);
+  transition: transform 0.25s, color 0.25s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(169,112,255,0.9), rgba(138,75,255,0.9));
+}
+
+/* === Gallery Section (Auto Resize & Crop for 6 spots) === */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
 }
 
 .gallery-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  aspect-ratio: 1 / 1; /* force square crop */
+  object-fit: cover;    /* crop & fill */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(169, 112, 255, 0.4);
+  box-shadow: 0 0 10px rgba(169, 112, 255, 0.25);
   transition: transform 0.3s;
+  display: block;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
+.gallery-grid img:hover { transform: scale(1.03); }
+
+/* === Donate Button === */
+.donate-btn {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 12px;
 }
 
-/* Everything else (unchanged from your last version) */
+.donate-btn:hover { background-color: var(--accent-dark); }
+
+/* === Back to Top Button === */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  z-index: 200;
+}
+
+/* === Basketball Page === */
+.basketball-header {
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.accolades-list {
+  list-style: none;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+  padding: 0;
+}
+
+.accolades-list li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 8px 0;
+  box-shadow: 0 0 10px rgba(169, 112, 255, 0.12);
+}
+
+/* timeline */
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--accent);
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* === Article Cards === */
+#articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.article-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(169, 112, 255, 0.12);
+  max-width: 750px;
+  text-align: left;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.article-card h3 { color: var(--accent); margin-bottom: 10px; }
+
+.read-more {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--accent);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.read-more:hover { background-color: var(--accent-dark); }
+
+/* === Fade-in Animation === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #111;
+  color: var(--muted);
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  header h1 { font-size: 2.6rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  #about { flex-direction: column; }
+  .navbar ul { gap: 8px; padding: 6px; }
+  header { height: auto; padding: 60px 20px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .social-icons a { width: 42px; height: 42px; font-size: 1.6rem; }
+}
+
+@media (max-width: 420px) {
+  header h1 { font-size: 2rem; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
