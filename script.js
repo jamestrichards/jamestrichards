@@ -53,3 +53,14 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+// READ MORE FUNCTION
+function toggleArticle(id, button) {
+  const article = document.getElementById(id);
+  article.classList.toggle("show");
+
+  if (article.classList.contains("show")) {
+    button.textContent = "Read Less";
+  } else {
+    button.textContent = "Read More";
+  }
+}
