@@ -1,167 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>James Richards: Psalms 3:3</title>
-
-  <!-- favicon (keeps your embedded svg favicon) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22black%22/><path d=%22M45 10h10v30h30v10H55v40H45V50H15V40h30z%22 fill=%22purple%22/></svg>">
-
-  <!-- styles & fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Richards | Psalms 3:3</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- fontawesome (kept for fallback if needed) -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-
-  <!-- main script -->
-  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <!-- Loading Screen -->
+  <div id="loader"><div class="glow">James Richards</div></div>
 
-  <!-- LOADER -->
-  <div id="loader">
-    <h1 class="glow">James Richards</h1>
-  </div>
-
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar">
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#verses">Verses</a></li>
-      <li><a href="#socials">Socials</a></li>
       <li><a href="#music">Music</a></li>
       <li><a href="#shows">Shows & Movies</a></li>
-      <li><a href="#ministry">Ministry</a></li>
-      <li><a href="#trips">Trips</a></li>
+      <li><a href="#missions">Missions</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#donate">Donate</a></li>
-      <li><a href="#contact">Email</a></li>
+      <li><a href="#verses">Bible Verses</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li><a href="basketball.html">Basketball</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="articles.html">Articles</a></li>
     </ul>
   </nav>
 
-  <!-- DARK/LIGHT MODE TOGGLE (button exists but styled bottom-left via CSS) -->
-  <button id="mode-toggle">☾</button>
-
-  <!-- HEADER / HERO -->
-  <header id="home">
+  <!-- Header -->
+  <header>
     <h1>James Richards</h1>
     <h2>Psalms 3:3</h2>
-    <p class="verse-text"><em>“But you, Lord, are a shield around me, my glory, the One who lifts my head high.”</em> — NIV</p>
+    <p class="verse-text">
+      “But you, Lord, are a shield around me, my glory, the One who lifts my head high.” — NIV
+    </p>
   </header>
 
-  <!-- ABOUT -->
+  <!-- About Section -->
   <section id="about" class="fade-in">
-    <!-- Profile image now loads from images/profile.jpg (upload your file with that exact name) -->
-    <img src="images/profile.jpg" alt="James Richards photo" />
+    <img src="B1B6FA8C-DB4B-4349-9A4F-370ABE289A75_1_105_c.jpeg" alt="James Richards" />
     <div>
-      <h3>About Me</h3>
-      <p>Hi I am James Richards! I am a follower of Christ, Business Major, and Basketball player. I currently attend Trinity Bible College in Ellendale, North Dakota, but I am a native of Williston. Thanks for visiting my site! - Sincerely, James</p>
+      <h3>Hi, I'm James Richards!</h3>
+      <p>
+        I am a follower of Christ, Business Major, and Basketball player.  
+        I currently attend Trinity Bible College in Ellendale, North Dakota,  
+        but I am a native of Williston. Thanks for visiting my site!  
+        <br /><br />— Sincerely, James
+      </p>
     </div>
   </section>
 
-  <!-- FAVORITE BIBLE VERSES -->
+  <!-- Socials Section -->
+  <section id="socials" class="fade-in">
+    <h2>Connect With Me</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/jt_rchrd/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music" class="fade-in">
+    <h2>What I’m Listening To</h2>
+    <p>Currently connected to my Apple Music account.</p>
+    <a href="https://music.apple.com/profile/jtrich348" target="_blank">Visit my Apple Music</a>
+  </section>
+
+  <!-- Shows and Movies Section -->
+  <section id="shows" class="fade-in">
+    <h2>What I’m Watching</h2>
+    <p>Follow my viewing list on Letterboxd.</p>
+    <a href="https://letterboxd.com/JamesRichards38/" target="_blank">View my Letterboxd</a>
+  </section>
+
+  <!-- Missions Section -->
+  <section id="missions" class="fade-in">
+    <h2>Ministry Opportunities</h2>
+    <p><strong>Upcoming Trip:</strong> Las Vegas – March 2026</p>
+    <p>Serving and supporting individuals impacted by human trafficking.</p>
+    <a href="https://venmo.com/u/JamesTRich" target="_blank" class="donate-btn">Donate via Venmo</a>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="fade-in">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/placeholder1.jpg" alt="Photo 1" />
+      <img src="images/placeholder2.jpg" alt="Photo 2" />
+      <img src="images/placeholder3.jpg" alt="Photo 3" />
+      <img src="images/placeholder4.jpg" alt="Photo 4" />
+      <img src="images/placeholder5.jpg" alt="Photo 5" />
+      <img src="images/placeholder6.jpg" alt="Photo 6" />
+    </div>
+  </section>
+
+  <!-- Bible Verses Section -->
   <section id="verses" class="fade-in">
-    <h3>Favorite Bible Verses</h3>
-    <ul>
-      <li><strong>Psalms 3:3</strong> — But you, Lord, are a shield around me, my glory, the One who lifts my head high.</li>
-      <li><strong>Jeremiah 29:11</strong> — For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.</li>
-      <li><strong>Philippians 4:13</strong> — I can do all things through Christ who strengthens me.</li>
-      <li><strong>1 John 2:29</strong> — If you know that he is righteous, you know that everyone who does what is right has been born of him.</li>
+    <h2>Favorite Bible Verses</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>Psalms 3:3</strong> — “But you, Lord, are a shield around me, my glory, the One who lifts my head high.”</li>
+      <li><strong>Jeremiah 29:11</strong> — “For I know the plans I have for you,” declares the Lord...</li>
+      <li><strong>Philippians 4:13</strong> — “I can do all things through Christ who strengthens me.”</li>
+      <li><strong>1 John 2:29</strong> — “If you know that he is righteous, you know that everyone who does what is right has been born of him.”</li>
     </ul>
   </section>
 
-  <!-- SOCIAL LINKS (icons loaded from images/icons/*.png) -->
-  <section id="socials" class="fade-in">
-    <h3>Connect With Me</h3>
-    <div class="social-icons">
-      <!-- Upload matching PNGs to images/icons/instagram.png etc. -->
-      <a href="https://www.instagram.com/jt_rchrd/" target="_blank" rel="noopener">
-        <img src="images/icons/instagram.png" alt="Instagram" width="38" height="38">
-      </a>
-      <a href="#" target="_blank" rel="noopener">
-        <img src="images/icons/youtube.png" alt="YouTube" width="38" height="38">
-      </a>
-      <a href="#" target="_blank" rel="noopener">
-        <img src="images/icons/facebook.png" alt="Facebook" width="38" height="38">
-      </a>
-      <a href="#" target="_blank" rel="noopener">
-        <img src="images/icons/linkedin.png" alt="LinkedIn" width="38" height="38">
-      </a>
-    </div>
-  </section>
-
-  <!-- MUSIC (Apple Music embed) -->
-  <section id="music" class="fade-in">
-    <h3>Currently Listening To</h3>
-    <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-      src="https://embed.music.apple.com/profile/jtrich348"></iframe>
-  </section>
-
-  <!-- SHOWS & MOVIES (Letterboxd link) -->
-  <section id="shows" class="fade-in">
-    <h3>Currently Watching</h3>
-    <p>Check out what I'm watching on <a href="https://letterboxd.com/JamesRichards38/" target="_blank" rel="noopener">Letterboxd</a>.</p>
-  </section>
-
-  <!-- MINISTRY -->
-  <section id="ministry" class="fade-in">
-    <h3>Ministry Opportunities</h3>
-    <p>I am passionate about spreading the Gospel through music and outreach. Follow my ministry journey and upcoming projects here.</p>
-  </section>
-
-  <!-- UPCOMING TRIPS -->
-  <section id="trips" class="fade-in">
-    <h3>Upcoming Trips</h3>
-    <p><strong>Las Vegas — March 2026:</strong> Working with human-trafficked individuals through outreach and ministry support.</p>
-  </section>
-
-  <!-- PHOTO GALLERY (6 image slots reading from images/ folder) -->
-  <section id="gallery" class="fade-in">
-    <h3>Photo Gallery</h3>
-    <div class="gallery-grid">
-      <img src="images/placeholder1.jpg" alt="Gallery photo 1">
-      <img src="images/placeholder2.jpg" alt="Gallery photo 2">
-      <img src="images/placeholder3.jpg" alt="Gallery photo 3">
-      <img src="images/placeholder4.jpg" alt="Gallery photo 4">
-      <img src="images/placeholder5.jpg" alt="Gallery photo 5">
-      <img src="images/placeholder6.jpg" alt="Gallery photo 6">
-    </div>
-    <p style="margin-top:12px; font-size:0.95rem; color: #bbb;">(To change: upload images to <code>images/</code> and keep the same filenames.)</p>
-  </section>
-
-  <!-- DONATE -->
-  <section id="donate" class="fade-in">
-    <h3>Support My Ministry</h3>
-    <a class="donate-btn" href="https://venmo.com/u/JamesTRich" target="_blank" rel="noopener">Donate via Venmo</a>
-  </section>
-
-  <!-- CONTACT / EMAIL -->
+  <!-- Contact Section -->
   <section id="contact" class="fade-in">
-    <h3>Contact Me</h3>
-    <p><a class="donate-btn" href="mailto:jamestrichards2005@gmail.com">Click here to email me</a></p>
+    <h2>Contact Me</h2>
+    <p>Click below to send me an email:</p>
+    <a href="mailto:jamestrichards2005@gmail.com" class="donate-btn">Click to Email Me</a>
 
-    <!-- Social icons also shown here under contact (images/icons/) -->
-    <div class="social-icons" style="margin-top:18px;">
-      <a href="https://www.instagram.com/jt_rchrd/" target="_blank" rel="noopener"><img src="images/icons/instagram.png" alt="Instagram" width="38" height="38"></a>
-      <a href="#" target="_blank" rel="noopener"><img src="images/icons/youtube.png" alt="YouTube" width="38" height="38"></a>
-      <a href="#" target="_blank" rel="noopener"><img src="images/icons/facebook.png" alt="Facebook" width="38" height="38"></a>
-      <a href="#" target="_blank" rel="noopener"><img src="images/icons/linkedin.png" alt="LinkedIn" width="38" height="38"></a>
+    <div class="social-icons" style="margin-top: 25px;">
+      <a href="https://www.instagram.com/jt_rchrd/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    <p>© 2025 James Richards</p>
+    <p>© 2025 James Richards | Built & Designed by James Richards</p>
   </footer>
 
-  <!-- BACK TO TOP -->
-  <button id="backToTop" aria-label="Back to top">↑</button>
+  <!-- Back to Top -->
+  <button id="backToTop">↑</button>
 
+  <!-- Dark/Light Mode Toggle -->
+  <button id="mode-toggle">☾</button>
 </body>
 </html>
